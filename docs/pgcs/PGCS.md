@@ -2,7 +2,7 @@
 
 ## Plano de Gerenciamento de Configuração — Enfoque DevOps
 
-**Integração e Entrega Contínuas (CI/CD) — Versão 1.0**
+**Integração e Entrega Contínuas (CI/CD) — Versão 1.1**
 
 | Campo | Descrição |
 |---|---|
@@ -18,6 +18,7 @@
 | Data | Versão | Descrição | Autor |
 |---|---|---|---|
 | 28/10/2026 | 1.0 | Criação do documento, adaptado do template do professor ao projeto Controle de Mudanças (Aula 1). | Maicon Mendes |
+| 28/10/2026 | 1.1 | Marco da Aula 1 concluído; registro das evidências de configuração do repositório. | Maicon Mendes |
 
 > **Como ler este plano.** Cada prática está marcada com a situação atual:
 > **[Implementado — Aula 1]** já está no repositório ou nas configurações do GitHub;
@@ -288,6 +289,7 @@ sempre do par de revisão.
 | `.env.example` | Nomes das variáveis de ambiente, **sem valores reais** | DevSecOps | Git; o `.env` real nunca é versionado | **Aula 1** |
 | `README.md` | Documentação — o que é o app, stack, instalar, rodar e testar | Desenvolvedor Líder | Git; PR + revisão | **Aula 1** |
 | `docs/pgcs/PGCS.md` | **Este plano** — documentação de GCS | Gerente de Configuração | Git; PR `docs(pgcs): ...` + revisão; versão e histórico no cabeçalho | **Aula 1** |
+| `docs/evidencias/aula-N.md` | Registro das evidências de cada marco (configurações aplicadas, recusa de push direto) | Gerente de Configuração | Git; PR `docs: ...` + revisão | **Aula 1** |
 | `.github/CODEOWNERS` | Configuração de colaboração — revisores automáticos por área | Gerente de Configuração | Git; PR + revisão | **Aula 1** |
 | `.github/pull_request_template.md` | Modelo de colaboração — template de PR | Gerente de Configuração | Git; PR + revisão | **Aula 1** |
 | `.github/ISSUE_TEMPLATE/funcionalidade.yml` | Modelo de colaboração — solicitação de funcionalidade | Gerente de Configuração | Git; PR + revisão | **Aula 1** |
@@ -333,6 +335,8 @@ controle-mudancas/
 │   ├── workflows/                    # (Aula 2) ci.yml, pr-titulo.yml · (Aula 3) cd.yml, rollback.yml
 │   └── dependabot.yml                # (Aula 4)
 ├── docs/
+│   ├── evidencias/
+│   │   └── aula-1.md                 # evidências do marco da Aula 1
 │   └── pgcs/
 │       └── PGCS.md                   # este plano
 ├── src/
@@ -594,7 +598,7 @@ Datas aproximadas, conforme a liberação das aulas.
 
 | Marco | Data | Entregas | Situação |
 |---|---|---|---|
-| Aula 1 — Repositório preparado | 28/10/2026 | Estrutura e ICs básicos, este PGCS, modelos de colaboração, par de revisão com *Write*, apenas *squash merge*, Environments `staging`/`production`, `main` protegida e evidência da recusa de push direto | **Em entrega** (prazo 28/10/2026) |
+| Aula 1 — Repositório preparado | 28/10/2026 | Estrutura e ICs básicos, este PGCS, modelos de colaboração, par de revisão com *Write*, apenas *squash merge*, Environments `staging`/`production`, `main` protegida e evidência da recusa de push direto | **Concluído** em 28/10/2026 — evidências em [docs/evidencias/aula-1.md](../evidencias/aula-1.md) |
 | Aula 2 — Integração Contínua | ~04/11/2026 | `ci.yml` (lint, testes, cobertura ≥ 80%, `npm audit`, build, `ci-ok`), `pr-titulo.yml`, checks obrigatórios na `main` | Planejado |
 | Aula 3 — Entrega Contínua | ~11/11/2026 | `cd.yml` (staging automático, aprovação de produção, tag + Release), `rollback.yml`, primeira baseline `vX.Y.Z` | Planejado |
 | Aula 4 — Governança | ~18/11/2026 | `dependabot.yml`, uso do CCM em uma mudança real, métricas DORA, revisão deste PGCS (versão 2.0) | Planejado |
