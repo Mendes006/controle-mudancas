@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Registro de Solicitações de Mudança e acompanhamento do fluxo do CCB" />
+    <title>Controle de Mudanças</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 id="titulo">Controle de Mudanças</h1>
+      <p>Registre Solicitações de Mudança (SM) e acompanhe a decisão do CCB até o novo baseline.</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="titulo-form" class="cartao">
+        <h2 id="titulo-form">Nova solicitação</h2>
+        <form id="form-sm" novalidate>
+          <div class="campo">
+            <label for="solicitante">Solicitante</label>
+            <input id="solicitante" name="solicitante" type="text" autocomplete="name" required />
+          </div>
+          <div class="campo">
+            <label for="sistema">Sistema/módulo</label>
+            <input id="sistema" name="sistema" type="text" required />
+          </div>
+          <div class="linha">
+            <div class="campo">
+              <label for="classificacao">Classificação</label>
+              <select id="classificacao" name="classificacao" required></select>
+            </div>
+            <div class="campo">
+              <label for="prioridade">Prioridade</label>
+              <select id="prioridade" name="prioridade" required></select>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="descricao">Descrição da mudança</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+          </div>
+          <ul id="erros" class="erros" role="alert"></ul>
+          <button type="submit">Registrar SM</button>
+        </form>
+      </section>
+
+      <section aria-labelledby="titulo-lista" class="cartao">
+        <div class="lista-topo">
+          <h2 id="titulo-lista">Solicitações</h2>
+          <div class="campo campo-filtro">
+            <label for="filtro">Filtrar por status</label>
+            <select id="filtro"></select>
+          </div>
+        </div>
+        <p id="vazio" class="vazio" hidden>Nenhuma solicitação encontrada.</p>
+        <ul id="lista" class="lista" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      Ambiente: <strong id="ambiente">local</strong>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

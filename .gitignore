@@ -1,0 +1,26 @@
+# Dependências
+node_modules/
+
+# Builds e relatórios
+dist/
+coverage/
+
+# Variáveis de ambiente locais: nunca versionar segredos (PGCS 4.1)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Ferramentas locais de assistentes
+.serena/
+.claude/
