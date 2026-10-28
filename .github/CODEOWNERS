@@ -11,6 +11,7 @@
 
 # Plano de Gerenciamento de Configuração (item de configuração)
 /docs/pgcs/          @Mendes006
+/docs/evidencias/    @Mendes006
 
 # Modelos de colaboração, CODEOWNERS e (a partir da Aula 2) workflows
 /.github/            @Mendes006
