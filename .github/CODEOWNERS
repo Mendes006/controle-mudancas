@@ -1,0 +1,28 @@
+# Revisores automáticos por área (PGC 2 e 5.2).
+# @Mendes006 é o Desenvolvedor Líder / Gerente de Configuração do projeto
+# Controle de Mudanças (CM). A aprovação do PR vem do par de revisão (PGC 2).
+#
+# Mudanças em pipelines, regras de negócio, dependências e no próprio PGCS são
+# de maior risco: o Desenvolvedor Líder é sempre chamado para revisar.
+
+# Código da aplicação e testes automatizados
+/src/                @Mendes006
+/tests/              @Mendes006
+
+# Plano de Gerenciamento de Configuração (item de configuração)
+/docs/pgcs/          @Mendes006
+
+# Modelos de colaboração, CODEOWNERS e (a partir da Aula 2) workflows
+/.github/            @Mendes006
+
+# Arquivos de raiz: build, dependências, ambiente e documentação
+/index.html          @Mendes006
+/package.json        @Mendes006
+/package-lock.json   @Mendes006
+/vite.config.js      @Mendes006
+/eslint.config.js    @Mendes006
+/.nvmrc              @Mendes006
+/.gitignore          @Mendes006
+/.gitattributes      @Mendes006
+/.env.example        @Mendes006
+/README.md           @Mendes006
