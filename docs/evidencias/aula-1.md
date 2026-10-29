@@ -48,3 +48,47 @@ e rebase merge desabilitados; branches apagadas automaticamente após o merge.
 |---|---|
 | `staging` | *Deployment branches*: somente branches protegidas |
 | `production` | *Required reviewers*: [@Mendes006](https://github.com/Mendes006) (Desenvolvedor Líder); *Prevent self-review* desmarcado; somente branches protegidas |
+
+## 6. Prints de cada etapa (28/10/2026)
+
+### 6.1 Repositório público e estrutura (item 1 e 2)
+
+![Repositório público com a estrutura de pastas](img/01-repositorio-publico-estrutura.jpg)
+
+### 6.2 Proteção da `main` (item 3)
+
+![Regra de proteção cadastrada para a main](img/02-regra-protecao-main.jpg)
+
+![PR obrigatório, 1 aprovação e descarte de aprovações antigas](img/03-protecao-main-pr-aprovacoes.jpg)
+
+![Histórico linear e sem bypass, inclusive para administradores](img/04-protecao-main-historico-linear-sem-bypass.jpg)
+
+### 6.3 Recusa do push direto na `main` (item 3)
+
+Nova tentativa feita em 28/10/2026 às 21:15:09; o commit de teste foi descartado localmente.
+
+![git push direto na main recusado com GH006](img/05-push-direto-main-recusado.jpg)
+
+### 6.4 Par de revisão com acesso de escrita (item 4)
+
+![cauepereira como colaborador do repositório](img/06-par-de-revisao-colaborador.jpg)
+
+### 6.5 Merge somente por squash (PGCS 3.3)
+
+![Somente squash merge, título e descrição do PR como mensagem, branches apagadas após o merge](img/07-merge-somente-squash.jpg)
+
+### 6.6 Environments (item 5)
+
+![Environments staging e production](img/08-environments-staging-production.jpg)
+
+![production com Mendes006 como revisor obrigatório](img/09-production-revisor-obrigatorio.jpg)
+
+### 6.7 Fluxo de Pull Request com revisão do par
+
+![PR 1 mergeado na main por squash](img/10-pr1-mergeado.jpg)
+
+![cauepereira aprovou o PR antes do merge](img/11-pr1-aprovado-pelo-par.jpg)
+
+### 6.8 Aplicação em execução (ambiente local)
+
+![Controle de Mudanças com a SM-0001 registrada](img/12-app-rodando-sm-registrada.jpg)
